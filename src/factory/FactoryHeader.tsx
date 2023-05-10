@@ -3,7 +3,6 @@ import React from "react";
 const FactoryHeader: React.FC = () => {
     return (
         <div className="App-header">
-            <span className={"App-header-primarytext"}>Avorion Factory Chain Planner / Mapper</span>
             <div>
                 <div className="App-header-subtext">
                     <span>From the 'Start Here' dropdown select the factory that will be the end of the production chain.</span>

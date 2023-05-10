@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import FactoryHeader from "./FactoryHeader";
+import AppHeader from "./AppHeader";
+import TabGroupComponent from "./TabGroupComponent";
 
 function App() {
     return (
         <div className="App">
-            <FactoryHeader/>
+            <AppHeader/>
+            <TabGroupComponent/>
         </div>
     );
 }
