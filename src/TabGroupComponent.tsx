@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Tab, Tabs} from "@mui/material";
 import FactoryHeader from "./factory/FactoryHeader";
 import TurretHeader from "./turret/TurretHeader";
+import TurretBody from "./turret/TurretBody";
 
 const tabOptions: String[] = ['Factory Planner', 'Turret Calculator'];
 
@@ -18,7 +19,12 @@ function TabGroup() {
             case 0:
                 return (<div><FactoryHeader/></div>);
             case 1:
-                return (<div><TurretHeader/></div>);
+                return (
+                    <div>
+                        <TurretHeader/>
+                        <TurretBody/>
+                    </div>
+                );
         }
     };
 
