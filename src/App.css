@@ -34,3 +34,8 @@
 .HeaderLine {
   width: 100%;
 }
+
+.Turret-Buttons {
+  padding-top: 8px;
+  padding-left: 8px;
+}
