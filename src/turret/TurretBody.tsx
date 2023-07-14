@@ -6,6 +6,7 @@ import {
 import TurretTableMaterialHeader from "./TurretTableMaterialHeader";
 import TurretTableMaterialBody from "./TurretTableMaterialBody";
 import TurretTableButtons from "./TurretTableButtons";
+import TurretTableFabrication from "./TurretTableFabrication";
 
 export type TurretMaterial = {
     name: string;
@@ -16,6 +17,7 @@ export type TurretMaterial = {
 export default function TurretBody() {
 
     const [turretMaterialList, setTurretMaterialList] = useState<TurretMaterial[]>([]);
+    const [turretFabricationCost, setTurretFabricationCost] = useState<number>(0);
 
     const resetTurretMaterials = () => {
         setTurretMaterialList([]);
@@ -36,6 +38,7 @@ export default function TurretBody() {
                 <Table>
                     <TurretTableMaterialHeader/>
                     <TurretTableMaterialBody turretMaterialList={turretMaterialList} setTurretMaterialList={setTurretMaterialList}/>
+                    <TurretTableFabrication turretFabricationCost={turretFabricationCost} setTurretFabricationCost={setTurretFabricationCost}/>
                 </Table>
             </TableContainer>
         </div>
