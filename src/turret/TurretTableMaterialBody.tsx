@@ -1,6 +1,16 @@
-import {TableBody, TableCell, TableRow, TextField} from "@mui/material";
+import {Stack, TableBody, TableCell, TableRow, TextField} from "@mui/material";
 import React from "react";
 import {TurretMaterial} from "./TurretBody";
+
+// @ts-ignore
+const TurretTableCostCell = ({material, multiplier}) => {
+    return (
+        <Stack>
+            <div>{material.unitCount * multiplier} units</div>
+            <div>{material.unitCount * multiplier * material.costPerUnit} CR</div>
+        </Stack>
+    );
+}
 
 // @ts-ignore
 const TurretTableMaterialBody = ({turretMaterialList, setTurretMaterialList}) => {
@@ -46,17 +56,17 @@ const TurretTableMaterialBody = ({turretMaterialList, setTurretMaterialList}) =>
                             }}
                         />
                     </TableCell>
-                    <TableCell>{material.unitCount} / {material.unitCount * material.costPerUnit}</TableCell>
-                    <TableCell>x2</TableCell>
-                    <TableCell>x4</TableCell>
-                    <TableCell>x6</TableCell>
-                    <TableCell>x8</TableCell>
-                    <TableCell>x10</TableCell>
-                    <TableCell>x12</TableCell>
-                    <TableCell>x14</TableCell>
-                    <TableCell>x16</TableCell>
-                    <TableCell>x18</TableCell>
-                    <TableCell>x20</TableCell>
+                    <TableCell><TurretTableCostCell material={material} multiplier={1}/></TableCell>
+                    <TableCell><TurretTableCostCell material={material} multiplier={2}/></TableCell>
+                    <TableCell><TurretTableCostCell material={material} multiplier={4}/></TableCell>
+                    <TableCell><TurretTableCostCell material={material} multiplier={6}/></TableCell>
+                    <TableCell><TurretTableCostCell material={material} multiplier={8}/></TableCell>
+                    <TableCell><TurretTableCostCell material={material} multiplier={10}/></TableCell>
+                    <TableCell><TurretTableCostCell material={material} multiplier={12}/></TableCell>
+                    <TableCell><TurretTableCostCell material={material} multiplier={14}/></TableCell>
+                    <TableCell><TurretTableCostCell material={material} multiplier={16}/></TableCell>
+                    <TableCell><TurretTableCostCell material={material} multiplier={18}/></TableCell>
+                    <TableCell><TurretTableCostCell material={material} multiplier={20}/></TableCell>
                 </TableRow>
             ))}
         </TableBody>
