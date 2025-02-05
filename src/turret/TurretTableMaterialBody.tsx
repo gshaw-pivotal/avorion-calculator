@@ -1,4 +1,4 @@
-import {Stack, TableBody, TableCell, TableRow, TextField} from "@mui/material";
+import {Checkbox, Stack, TableBody, TableCell, TableRow, TextField} from "@mui/material";
 import React from "react";
 import {TurretMaterial} from "./TurretBody";
 
@@ -18,6 +18,12 @@ const TurretTableMaterialBody = ({turretMaterialList, setTurretMaterialList}) =>
         <TableBody>
             {turretMaterialList.map((material: TurretMaterial, index: number) => (
                 <TableRow>
+                    <TableCell>
+                        <Checkbox
+                            key={`obtained-${index}`}
+                            size="small"
+                        />
+                    </TableCell>
                     <TableCell className="Turret-Build-Table-Cell">
                         <TextField
                             key={`material-${index}`}

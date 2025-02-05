@@ -5,8 +5,9 @@ const TurretTableMaterialHeader = () => {
     return (
         <TableHead>
             <TableRow>
+                <TableCell>Obtained</TableCell>
                 <TableCell>Material</TableCell>
-                <TableCell>Qty</TableCell>
+                <TableCell>Qty per Turret</TableCell>
                 <TableCell>Cost per Unit</TableCell>
                 <TableCell>x1</TableCell>
                 <TableCell>x2</TableCell>

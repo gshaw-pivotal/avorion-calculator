@@ -20,6 +20,7 @@ const TurretTableTotalCosts = (props: {turretMaterialList: TurretMaterial[], tur
             <TableCell>Total Cost to Build</TableCell>
             <TableCell></TableCell>
             <TableCell></TableCell>
+            <TableCell></TableCell>
             <TableCell>{costForOne} CR</TableCell>
             <TableCell>{costForOne * 2} CR</TableCell>
             <TableCell>{costForOne * 4} CR</TableCell>

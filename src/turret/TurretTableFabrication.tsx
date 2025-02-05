@@ -7,6 +7,7 @@ const TurretTableFabrication = ({turretFabricationCost, setTurretFabricationCost
         <TableRow>
             <TableCell>Fabrication Cost</TableCell>
             <TableCell></TableCell>
+            <TableCell></TableCell>
             <TableCell>
                 <TextField
                     key={`fabrication-cost`}
