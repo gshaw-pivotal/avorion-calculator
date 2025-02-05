@@ -18,7 +18,7 @@ const TurretTableMaterialBody = ({turretMaterialList, setTurretMaterialList}) =>
         <TableBody>
             {turretMaterialList.map((material: TurretMaterial, index: number) => (
                 <TableRow>
-                    <TableCell>
+                    <TableCell className="Turret-Table-Obtained-Column">
                         <Checkbox
                             key={`obtained-${index}`}
                             size="small"

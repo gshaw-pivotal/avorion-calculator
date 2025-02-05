@@ -5,8 +5,8 @@ import React from "react";
 const TurretTableFabrication = ({turretFabricationCost, setTurretFabricationCost}) => {
     return (
         <TableRow>
-            <TableCell>Fabrication Cost</TableCell>
             <TableCell></TableCell>
+            <TableCell>Fabrication Cost</TableCell>
             <TableCell></TableCell>
             <TableCell>
                 <TextField

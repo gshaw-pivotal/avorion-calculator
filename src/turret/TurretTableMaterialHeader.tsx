@@ -5,10 +5,10 @@ const TurretTableMaterialHeader = () => {
     return (
         <TableHead>
             <TableRow>
-                <TableCell>Obtained</TableCell>
-                <TableCell>Material</TableCell>
-                <TableCell>Qty per Turret</TableCell>
-                <TableCell>Cost per Unit</TableCell>
+                <TableCell className="Turret-Table-Obtained-Column">Obtained</TableCell>
+                <TableCell className="Turret-Table-Material-Column">Material</TableCell>
+                <TableCell className="Turret-Table-Qty-Column">Qty per Turret</TableCell>
+                <TableCell className="Turret-Table-Cost-Column">Cost per Unit</TableCell>
                 <TableCell>x1</TableCell>
                 <TableCell>x2</TableCell>
                 <TableCell>x4</TableCell>

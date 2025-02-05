@@ -43,3 +43,19 @@
 .Turret-Buttons {
   width: 150px;
 }
+
+.Turret-Table-Obtained-Column {
+  width: 75px;
+}
+
+.Turret-Table-Material-Column {
+  width: 250px;
+}
+
+.Turret-Table-Qty-Column {
+  width: 100px;
+}
+
+.Turret-Table-Cost-Column {
+  width: 100px;
+}

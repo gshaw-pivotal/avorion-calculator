@@ -17,8 +17,8 @@ const TurretTableTotalCosts = (props: {turretMaterialList: TurretMaterial[], tur
         const costForOne: number = calculateOneCost(props.turretMaterialList, props.turretFabricationCost);
     return (
         <TableRow>
-            <TableCell>Total Cost to Build</TableCell>
             <TableCell></TableCell>
+            <TableCell>Total Cost to Build</TableCell>
             <TableCell></TableCell>
             <TableCell></TableCell>
             <TableCell>{costForOne} CR</TableCell>
