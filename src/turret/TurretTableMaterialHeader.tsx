@@ -1,7 +1,8 @@
-import {TableCell, TableHead, TableRow} from "@mui/material";
+import {TableCell, TableHead, TableRow, TextField} from "@mui/material";
 import React from "react";
 
-const TurretTableMaterialHeader = () => {
+// @ts-ignore
+const TurretTableMaterialHeader = ({turretMultiplier, setTurretMultiplier}) => {
     return (
         <TableHead>
             <TableRow>
@@ -9,17 +10,21 @@ const TurretTableMaterialHeader = () => {
                 <TableCell className="Turret-Table-Material-Column">Material</TableCell>
                 <TableCell className="Turret-Table-Qty-Column">Qty per Turret</TableCell>
                 <TableCell className="Turret-Table-Cost-Column">Cost per Unit</TableCell>
-                <TableCell>x1</TableCell>
-                <TableCell>x2</TableCell>
-                <TableCell>x4</TableCell>
-                <TableCell>x6</TableCell>
-                <TableCell>x8</TableCell>
-                <TableCell>x10</TableCell>
-                <TableCell>x12</TableCell>
-                <TableCell>x14</TableCell>
-                <TableCell>x16</TableCell>
-                <TableCell>x18</TableCell>
-                <TableCell>x20</TableCell>
+                <TableCell className="Turret-Table-Calculated-Column">x1</TableCell>
+                <TableCell className="Turret-Table-Calculated-Column">
+                    <div>
+                    <TextField
+                        key={`multiplier`}
+                        variant="filled"
+                        size="small"
+                        type="number"
+                        value={turretMultiplier}
+                        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                            setTurretMultiplier(event.target.value)
+                        }}
+                    />
+                    </div>
+                </TableCell>
             </TableRow>
         </TableHead>
     );

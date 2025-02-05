@@ -19,6 +19,7 @@ export default function TurretBody() {
 
     const [turretMaterialList, setTurretMaterialList] = useState<TurretMaterial[]>([]);
     const [turretFabricationCost, setTurretFabricationCost] = useState<number>(0);
+    const [turretMultiplier, setTurretMulitpler] = useState<number>(2);
 
     const resetTurretMaterials = () => {
         setTurretMaterialList([]);
@@ -33,16 +34,20 @@ export default function TurretBody() {
     }
 
     return (
-        <div>
-            <TurretTableButtons resetTurretMaterials={resetTurretMaterials} addNewTurretMaterial={addNewTurretMaterial} removeLastTurretMaterial={removeLastTurretMaterial}/>
-            <TableContainer>
-                <Table>
-                    <TurretTableMaterialHeader/>
-                    <TurretTableMaterialBody turretMaterialList={turretMaterialList} setTurretMaterialList={setTurretMaterialList}/>
-                    <TurretTableFabrication turretFabricationCost={turretFabricationCost} setTurretFabricationCost={setTurretFabricationCost}/>
-                    <TurretTableTotalCosts turretMaterialList={turretMaterialList} turretFabricationCost={turretFabricationCost}/>
-                </Table>
-            </TableContainer>
+        <div className="Turret-View-Layout">
+            <div>
+                <TurretTableButtons resetTurretMaterials={resetTurretMaterials} addNewTurretMaterial={addNewTurretMaterial} removeLastTurretMaterial={removeLastTurretMaterial}/>
+                <TableContainer>
+                    <Table>
+                        <TurretTableMaterialHeader turretMultiplier={turretMultiplier} setTurretMultiplier={setTurretMulitpler}/>
+                        <TurretTableMaterialBody turretMaterialList={turretMaterialList} setTurretMaterialList={setTurretMaterialList} turretMultiplier={turretMultiplier}/>
+                        <TurretTableFabrication turretFabricationCost={turretFabricationCost} setTurretFabricationCost={setTurretFabricationCost} turretMultiplier={turretMultiplier}/>
+                        <TurretTableTotalCosts turretMaterialList={turretMaterialList} turretFabricationCost={turretFabricationCost} turretMultiplier={turretMultiplier}/>
+                    </Table>
+                </TableContainer>
+            </div>
+            <div>
+            </div>
         </div>
     );
 }

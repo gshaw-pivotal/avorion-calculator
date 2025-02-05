@@ -13,7 +13,7 @@ const calculateOneCost = (turretMaterialList: TurretMaterial[], turretFabricatio
 }
 
 // @ts-ignore
-const TurretTableTotalCosts = (props: {turretMaterialList: TurretMaterial[], turretFabricationCost: number}) => {
+const TurretTableTotalCosts = (props: {turretMaterialList: TurretMaterial[], turretFabricationCost: number, turretMultiplier: number}) => {
         const costForOne: number = calculateOneCost(props.turretMaterialList, props.turretFabricationCost);
     return (
         <TableRow>
@@ -22,16 +22,7 @@ const TurretTableTotalCosts = (props: {turretMaterialList: TurretMaterial[], tur
             <TableCell></TableCell>
             <TableCell></TableCell>
             <TableCell>{costForOne} CR</TableCell>
-            <TableCell>{costForOne * 2} CR</TableCell>
-            <TableCell>{costForOne * 4} CR</TableCell>
-            <TableCell>{costForOne * 6} CR</TableCell>
-            <TableCell>{costForOne * 8} CR</TableCell>
-            <TableCell>{costForOne * 10} CR</TableCell>
-            <TableCell>{costForOne * 12} CR</TableCell>
-            <TableCell>{costForOne * 14} CR</TableCell>
-            <TableCell>{costForOne * 16} CR</TableCell>
-            <TableCell>{costForOne * 18} CR</TableCell>
-            <TableCell>{costForOne * 20} CR</TableCell>
+            <TableCell>{costForOne * props.turretMultiplier} CR</TableCell>
         </TableRow>
     );
 }
