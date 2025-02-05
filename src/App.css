@@ -35,7 +35,11 @@
   width: 100%;
 }
 
-.Turret-Buttons {
+.Turret-Buttons-Row {
   padding-top: 8px;
   padding-left: 8px;
+}
+
+.Turret-Buttons {
+  width: 150px;
 }
