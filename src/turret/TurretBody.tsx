@@ -24,6 +24,8 @@ export default function TurretBody() {
 
     const resetTurretMaterials = () => {
         setTurretMaterialList([]);
+        setTurretFabricationCost(0)
+        setTurretMultiplier(2)
     }
 
     const addNewTurretMaterial = () => {

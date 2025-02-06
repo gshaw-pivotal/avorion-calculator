@@ -17,6 +17,7 @@ const TurretTableFabrication = ({turretFabricationCost, setTurretFabricationCost
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                         setTurretFabricationCost(event.target.value)
                     }}
+                    value={turretFabricationCost}
                 />
             </TableCell>
             <TableCell>{turretFabricationCost * 1} CR</TableCell>
