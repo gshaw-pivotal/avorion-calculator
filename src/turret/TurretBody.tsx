@@ -19,7 +19,7 @@ export default function TurretBody() {
 
     const [turretMaterialList, setTurretMaterialList] = useState<TurretMaterial[]>([]);
     const [turretFabricationCost, setTurretFabricationCost] = useState<number>(0);
-    const [turretMultiplier, setTurretMulitpler] = useState<number>(2);
+    const [turretMultiplier, setTurretMultiplier] = useState<number>(2);
 
     const resetTurretMaterials = () => {
         setTurretMaterialList([]);
@@ -39,7 +39,7 @@ export default function TurretBody() {
                 <TurretTableButtons resetTurretMaterials={resetTurretMaterials} addNewTurretMaterial={addNewTurretMaterial} removeLastTurretMaterial={removeLastTurretMaterial}/>
                 <TableContainer>
                     <Table>
-                        <TurretTableMaterialHeader turretMultiplier={turretMultiplier} setTurretMultiplier={setTurretMulitpler}/>
+                        <TurretTableMaterialHeader turretMultiplier={turretMultiplier} setTurretMultiplier={setTurretMultiplier}/>
                         <TurretTableMaterialBody turretMaterialList={turretMaterialList} setTurretMaterialList={setTurretMaterialList} turretMultiplier={turretMultiplier}/>
                         <TurretTableFabrication turretFabricationCost={turretFabricationCost} setTurretFabricationCost={setTurretFabricationCost} turretMultiplier={turretMultiplier}/>
                         <TurretTableTotalCosts turretMaterialList={turretMaterialList} turretFabricationCost={turretFabricationCost} turretMultiplier={turretMultiplier}/>
