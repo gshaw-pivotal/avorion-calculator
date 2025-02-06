@@ -67,3 +67,19 @@
 .Turret-Table-Calculated-Column {
   width: 100px;
 }
+
+.Turret-Stat-Card {
+  padding-left: 40px;
+}
+
+.Turret-Stat-Card-Table {
+  border: 1px;
+}
+
+.Turret-Stat-Card-Field-Column {
+  width: 120px;
+}
+
+.Turret-Stat-Card-Info-Column {
+  width: 250px;
+}

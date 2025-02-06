@@ -8,6 +8,7 @@ import TurretTableMaterialBody from "./TurretTableMaterialBody";
 import TurretTableButtons from "./TurretTableButtons";
 import TurretTableFabrication from "./TurretTableFabrication";
 import TurretTableTotalCosts from "./TurretTableTotalCosts";
+import TurretStatCard from "./TurretStatCard";
 
 export type TurretMaterial = {
     name: string;
@@ -47,6 +48,7 @@ export default function TurretBody() {
                 </TableContainer>
             </div>
             <div>
+                <TurretStatCard/>
             </div>
         </div>
     );
