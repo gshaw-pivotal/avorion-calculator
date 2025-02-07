@@ -111,6 +111,8 @@ const TurretStatCard = () => {
                                         key={`stat-other`}
                                         variant="filled"
                                         size="small"
+                                        multiline
+                                        rows={3}
                                         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                             setOther(event.target.value)
                                         }}
