@@ -4,34 +4,34 @@
   text-align: center;
 }
 
-.App-header {
+.App-Header {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
 }
 
-.App-header-primarytext {
+.App-Header-Primary-Text {
   font-size: calc(10px + 2vmin);
   padding-bottom: 12px;
 }
 
-.App-header-subtext {
+.App-Header-Sub-Text {
   font-size: 14px;
   padding-bottom: 8px;
 }
 
-.App-link {
+.App-Link {
   color: #61dafb;
 }
 
-.TabGroup {
+.Tab-Group {
   font-size: 14px;
   padding-bottom: 8px;
   color: white;
 }
 
-.HeaderLine {
+.Header-Line {
   width: 100%;
 }
 

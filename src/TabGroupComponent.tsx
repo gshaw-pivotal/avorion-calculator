@@ -29,7 +29,7 @@ function TabGroup() {
     };
 
     return (
-        <div className="TabGroup">
+        <div className="Tab-Group">
             <Tabs
                 textColor='inherit'
                 onChange={tabChange}
