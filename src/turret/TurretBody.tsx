@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {
+    Box,
     Table,
     TableContainer,
 } from "@mui/material";
@@ -40,14 +41,16 @@ export default function TurretBody() {
         <div className="Turret-View-Layout">
             <div>
                 <TurretTableButtons resetTurretMaterials={resetTurretMaterials} addNewTurretMaterial={addNewTurretMaterial} removeLastTurretMaterial={removeLastTurretMaterial}/>
-                <TableContainer>
-                    <Table>
-                        <TurretTableMaterialHeader turretMultiplier={turretMultiplier} setTurretMultiplier={setTurretMultiplier}/>
-                        <TurretTableMaterialBody turretMaterialList={turretMaterialList} setTurretMaterialList={setTurretMaterialList} turretMultiplier={turretMultiplier}/>
-                        <TurretTableFabrication turretFabricationCost={turretFabricationCost} setTurretFabricationCost={setTurretFabricationCost} turretMultiplier={turretMultiplier}/>
-                        <TurretTableTotalCosts turretMaterialList={turretMaterialList} turretFabricationCost={turretFabricationCost} turretMultiplier={turretMultiplier}/>
-                    </Table>
-                </TableContainer>
+                <Box sx={{border: 1}}>
+                    <TableContainer>
+                        <Table>
+                            <TurretTableMaterialHeader turretMultiplier={turretMultiplier} setTurretMultiplier={setTurretMultiplier}/>
+                            <TurretTableMaterialBody turretMaterialList={turretMaterialList} setTurretMaterialList={setTurretMaterialList} turretMultiplier={turretMultiplier}/>
+                            <TurretTableFabrication turretFabricationCost={turretFabricationCost} setTurretFabricationCost={setTurretFabricationCost} turretMultiplier={turretMultiplier}/>
+                            <TurretTableTotalCosts turretMaterialList={turretMaterialList} turretFabricationCost={turretFabricationCost} turretMultiplier={turretMultiplier}/>
+                        </Table>
+                    </TableContainer>
+                </Box>
             </div>
             <div>
                 <TurretStatCard/>
