@@ -11,9 +11,11 @@ const TurretTableFabrication = ({turretFabricationCost, setTurretFabricationCost
             <TableCell>
                 <TextField
                     key={`fabrication-cost`}
-                    variant="filled"
+                    variant="outlined"
                     size="small"
                     type="number"
+                    color="primary"
+                    focused
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                         setTurretFabricationCost(event.target.value)
                     }}

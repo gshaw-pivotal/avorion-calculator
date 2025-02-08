@@ -27,8 +27,10 @@ const TurretTableMaterialBody = ({turretMaterialList, setTurretMaterialList, tur
                     <TableCell className="Turret-Build-Table-Cell">
                         <TextField
                             key={`material-${index}`}
-                            variant="filled"
+                            variant="outlined"
                             size="small"
+                            color="primary"
+                            focused
                             onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                 const entries = [...turretMaterialList]
                                 entries[index].name = event.target.value
@@ -39,9 +41,11 @@ const TurretTableMaterialBody = ({turretMaterialList, setTurretMaterialList, tur
                     <TableCell className="Turret-Build-Table-Cell">
                         <TextField
                             key={`quantity-${index}`}
-                            variant="filled"
+                            variant="outlined"
                             size="small"
                             type="number"
+                            color="primary"
+                            focused
                             onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                 const entries = [...turretMaterialList]
                                 entries[index].unitCount = event.target.value
@@ -52,9 +56,11 @@ const TurretTableMaterialBody = ({turretMaterialList, setTurretMaterialList, tur
                     <TableCell className="Turret-Build-Table-Cell">
                         <TextField
                             key={`cost-${index}`}
-                            variant="filled"
+                            variant="outlined"
                             size="small"
                             type="number"
+                            color="primary"
+                            focused
                             onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                 const entries = [...turretMaterialList]
                                 entries[index].costPerUnit = event.target.value

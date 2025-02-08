@@ -25,8 +25,10 @@ const TurretStatCard = () => {
                                 <TableCell className="Turret-Stat-Card-Info-Column">
                                     <TextField
                                         key={`stat-name`}
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
+                                        color="secondary"
+                                        focused
                                         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                             setName(event.target.value)
                                         }}
@@ -39,8 +41,10 @@ const TurretStatCard = () => {
                                 <TableCell className="Turret-Stat-Card-Info-Column">
                                     <TextField
                                         key={`stat-level`}
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
+                                        color="secondary"
+                                        focused
                                         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                             setLevel(event.target.value)
                                         }}
@@ -53,8 +57,10 @@ const TurretStatCard = () => {
                                 <TableCell className="Turret-Stat-Card-Info-Column">
                                     <TextField
                                         key={`stat-dps`}
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
+                                        color="secondary"
+                                        focused
                                         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                             setDps(event.target.value)
                                         }}
@@ -67,8 +73,10 @@ const TurretStatCard = () => {
                                 <TableCell className="Turret-Stat-Card-Info-Column">
                                     <TextField
                                         key={`stat-firerate`}
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
+                                        color="secondary"
+                                        focused
                                         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                             setFirerate(event.target.value)
                                         }}
@@ -81,8 +89,10 @@ const TurretStatCard = () => {
                                 <TableCell className="Turret-Stat-Card-Info-Column">
                                     <TextField
                                         key={`stat-range`}
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
+                                        color="secondary"
+                                        focused
                                         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                             setRange(event.target.value)
                                         }}
@@ -95,8 +105,10 @@ const TurretStatCard = () => {
                                 <TableCell className="Turret-Stat-Card-Info-Column">
                                     <TextField
                                         key={`stat-slots`}
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
+                                        color="secondary"
+                                        focused
                                         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                             setSlots(event.target.value)
                                         }}
@@ -109,10 +121,12 @@ const TurretStatCard = () => {
                                 <TableCell className="Turret-Stat-Card-Info-Column">
                                     <TextField
                                         key={`stat-other`}
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
                                         multiline
                                         rows={3}
+                                        color="secondary"
+                                        focused
                                         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                             setOther(event.target.value)
                                         }}
