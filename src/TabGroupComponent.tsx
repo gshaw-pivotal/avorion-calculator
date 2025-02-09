@@ -3,8 +3,10 @@ import {Tab, Tabs} from "@mui/material";
 import FactoryHeader from "./factory/FactoryHeader";
 import TurretHeader from "./turret/TurretHeader";
 import TurretBody from "./turret/TurretBody";
+import ComponentHeader from "./components/ComponentHeader";
+import ComponentBody from "./components/ComponentBody";
 
-const tabOptions: String[] = ['Factory Planner', 'Turret Calculator'];
+const tabOptions: String[] = ['Factory Planner', 'Turret Calculator', 'Components, Goods & Materials'];
 
 function TabGroup() {
 
@@ -23,6 +25,13 @@ function TabGroup() {
                     <div>
                         <TurretHeader/>
                         <TurretBody/>
+                    </div>
+                );
+            case 2:
+                return (
+                    <div>
+                        <ComponentHeader/>
+                        <ComponentBody/>
                     </div>
                 );
         }
