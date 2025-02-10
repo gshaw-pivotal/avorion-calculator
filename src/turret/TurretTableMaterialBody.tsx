@@ -26,6 +26,20 @@ const TurretTableMaterialBody = ({turretMaterialList, setTurretMaterialList, tur
                     </TableCell>
                     <TableCell className="Turret-Build-Table-Cell">
                         <TextField
+                            key={`location-${index}`}
+                            variant="outlined"
+                            size="small"
+                            color="primary"
+                            focused
+                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                                const entries = [...turretMaterialList]
+                                entries[index].location = event.target.value
+                                setTurretMaterialList(entries)
+                            }}
+                        />
+                    </TableCell>
+                    <TableCell className="Turret-Build-Table-Cell">
+                        <TextField
                             key={`material-${index}`}
                             variant="outlined"
                             size="small"

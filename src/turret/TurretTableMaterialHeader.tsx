@@ -7,6 +7,7 @@ const TurretTableMaterialHeader = ({turretMultiplier, setTurretMultiplier}) => {
         <TableHead>
             <TableRow>
                 <TableCell className="Turret-Table-Obtained-Column">Obtained</TableCell>
+                <TableCell className="Turret-Table-Location-Column">Sector Co-ords</TableCell>
                 <TableCell className="Turret-Table-Material-Column">Material</TableCell>
                 <TableCell className="Turret-Table-Qty-Column">Qty per Turret</TableCell>
                 <TableCell className="Turret-Table-Cost-Column">Cost per Unit</TableCell>

@@ -6,6 +6,7 @@ const TurretTableFabrication = ({turretFabricationCost, setTurretFabricationCost
     return (
         <TableRow>
             <TableCell></TableCell>
+            <TableCell></TableCell>
             <TableCell>Fabrication Cost</TableCell>
             <TableCell></TableCell>
             <TableCell>

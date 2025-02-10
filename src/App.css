@@ -54,6 +54,10 @@
   width: 75px;
 }
 
+.Turret-Table-Location-Column {
+  width: 100px;
+}
+
 .Turret-Table-Material-Column {
   width: 250px;
 }

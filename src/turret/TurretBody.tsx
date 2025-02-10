@@ -15,6 +15,7 @@ export type TurretMaterial = {
     name: string;
     costPerUnit: number;
     unitCount: number;
+    location: string;
 }
 
 export default function TurretBody() {
@@ -30,7 +31,7 @@ export default function TurretBody() {
     }
 
     const addNewTurretMaterial = () => {
-        setTurretMaterialList([...turretMaterialList, {name: "", costPerUnit: 0, unitCount: 0}])
+        setTurretMaterialList([...turretMaterialList, {name: "", costPerUnit: 0, unitCount: 0, location: ""}])
     }
 
     const removeLastTurretMaterial = () => {

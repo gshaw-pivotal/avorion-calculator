@@ -18,6 +18,7 @@ const TurretTableTotalCosts = (props: {turretMaterialList: TurretMaterial[], tur
     return (
         <TableRow>
             <TableCell></TableCell>
+            <TableCell></TableCell>
             <TableCell>Total Cost to Build</TableCell>
             <TableCell></TableCell>
             <TableCell></TableCell>
