@@ -4,6 +4,7 @@ import {Box, Table, TableBody, TableCell, TableRow, TextField} from "@mui/materi
 // @ts-ignore
 const TurretStatCard = () => {
 
+    const [location, setLocation] = useState("");
     const [name, setName] = useState("");
     const [level, setLevel] = useState("");
     const [dps, setDps] = useState("");
@@ -21,7 +22,23 @@ const TurretStatCard = () => {
                     <Table>
                         <TableBody>
                             <TableRow>
-                                <TableCell className="Turret-Stat-Card-Field-Column">Name</TableCell>
+                                <TableCell className="Turret-Stat-Card-Field-Column">Factory Sector Co-ords</TableCell>
+                                <TableCell className="Turret-Stat-Card-Info-Column">
+                                    <TextField
+                                        key={`stat-location`}
+                                        variant="outlined"
+                                        size="small"
+                                        color="secondary"
+                                        focused
+                                        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                                            setLocation(event.target.value)
+                                        }}
+                                        value={location}
+                                    />
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Name</TableCell>
                                 <TableCell className="Turret-Stat-Card-Info-Column">
                                     <TextField
                                         key={`stat-name`}
