@@ -1,8 +1,12 @@
-import React, {useState} from "react";
+import React, {forwardRef, useImperativeHandle, useState} from "react";
 import {Box, Table, TableBody, TableCell, TableRow, TextField} from "@mui/material";
 
 // @ts-ignore
-const TurretStatCard = () => {
+const TurretStatCard = forwardRef((props, ref) => {
+
+    useImperativeHandle(ref, () => ({
+        resetStatCard: () => resetStatCard()
+    }));
 
     const [location, setLocation] = useState("");
     const [name, setName] = useState("");
@@ -12,6 +16,17 @@ const TurretStatCard = () => {
     const [range, setRange] = useState("");
     const [slots, setSlots] = useState("");
     const [other, setOther] = useState("");
+
+    const resetStatCard = () => {
+        setLocation("");
+        setName("");
+        setLevel("");
+        setDps("");
+        setFirerate("");
+        setRange("");
+        setSlots("");
+        setOther("");
+    }
 
     return (
         <div className="Turret-Stat-Card">
@@ -157,6 +172,6 @@ const TurretStatCard = () => {
             </Box>
         </div>
     );
-}
+});
 
 export default TurretStatCard;

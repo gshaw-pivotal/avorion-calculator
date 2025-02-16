@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import {
     Box,
     Table,
@@ -24,10 +24,14 @@ export default function TurretBody() {
     const [turretFabricationCost, setTurretFabricationCost] = useState<number>(0);
     const [turretMultiplier, setTurretMultiplier] = useState<number>(2);
 
+    const statCardChildRef = useRef();
+
     const resetTurretMaterials = () => {
         setTurretMaterialList([]);
         setTurretFabricationCost(0)
         setTurretMultiplier(2)
+        // @ts-ignore
+        statCardChildRef.current.resetStatCard()
     }
 
     const addNewTurretMaterial = () => {
@@ -54,7 +58,7 @@ export default function TurretBody() {
                 </Box>
             </div>
             <div>
-                <TurretStatCard/>
+                <TurretStatCard ref={statCardChildRef}/>
             </div>
         </div>
     );
